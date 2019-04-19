@@ -1,0 +1,1581 @@
+@font-face {
+    font-family: 'Proxima Nova Sb';
+    src: url('../../fonts/ProximaNova-Semibold.eot');
+    src: url('../../fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/ProximaNova-Semibold.woff2') format('woff2'),
+        url('../../fonts/ProximaNova-Semibold.woff') format('woff'),
+        url('../../fonts/ProximaNova-Semibold.ttf') format('truetype'),
+        url('../../fonts/ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Bd';
+    src: url('../../fonts/ProximaNova-Bold.eot');
+    src: url('../../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/ProximaNova-Bold.woff2') format('woff2'),
+        url('../../fonts/ProximaNova-Bold.woff') format('woff'),
+        url('../../fonts/ProximaNova-Bold.ttf') format('truetype'),
+        url('../../fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('../../fonts/ProximaNova-Regular.eot');
+    src: url('../../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('../../fonts/ProximaNova-Regular.woff') format('woff'),
+        url('../../fonts/ProximaNova-Regular.ttf') format('truetype'),
+        url('../../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Lt';
+    src: url('../../fonts/ProximaNova-Light.eot');
+    src: url('../../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/ProximaNova-Light.woff2') format('woff2'),
+        url('../../fonts/ProximaNova-Light.woff') format('woff'),
+        url('../../fonts/ProximaNova-Light.ttf') format('truetype'),
+        url('../../fonts/ProximaNova-Light.svg#ProximaNova-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+$cblack: rgb(0, 0, 0);
+
+$cwhite: rgb(255, 255, 255);
+
+$clilac: rgb(94, 66, 176);
+
+$path: '../../images/';
+
+%for-d {
+    font-family: 'Proxima Nova Rg';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 1px;
+}
+
+%for-dc {
+    font-family: 'Proxima Nova Rg';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 1.2px;
+}
+
+%for-c {
+    color: rgb(164, 150, 202);
+    font-family: 'Proxima Nova Bd';
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+}
+
+%for-t {
+    color: rgb(231, 231, 231);
+    font-family: 'Proxima Nova Bd';
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: uppercase;
+}
+
+.header {
+    background: url($path + "footbol.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    
+
+    &__opasity {
+        background-color: rgba(10, 14, 52, 0.9);
+    }
+
+    .container {
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 254px;
+            height: 317px;
+            background-image: url($path + "rectangle-1.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            z-index: 1;
+            top: 303px;
+            left: 392px;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        padding-top: 54px;
+
+        &-a {
+            display: block;
+            width: 189px;
+            height: 33px;
+            background-repeat: no-repeat;
+            background-image: url($path + "logo.png");
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    &__descr {
+        margin-top: 53px;
+        color: $cwhite;
+        font-family: 'Proxima Nova Lt';
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 35px;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+    }
+
+    &__title {
+        text-align: start;
+        color: $cwhite;
+        font-family: 'Proxima Nova Bd';
+        font-size: 90px;
+        font-weight: 700;
+        line-height: 90px;
+        text-transform: uppercase;
+        letter-spacing: 4.5px;
+
+        &.title-l {
+            position: relative;
+            z-index: 2;
+            margin-top: 309px;
+        }
+
+        &.title-r {
+            text-align: end;
+        }
+    }
+
+    &__link {
+        text-align: end;
+        color: rgb(144, 113, 234);
+        font-family: 'Proxima Nova Lt';
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 35px;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+
+        &.none {
+            display: none;
+        }
+
+        &-a {
+            margin-left: 52px;
+            text-decoration: none;
+
+            &:hover {
+                color: $cwhite;
+            }
+        }
+    }
+
+    &__but {
+        margin-top: 169px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 110px;
+    }
+}
+
+.button {
+    text-align: start;
+    position: relative;
+    padding: 0;
+    border: 0;
+    border-radius: 39px;
+    width: 311px;
+    height: 77px;
+    background-color: $clilac;
+    box-shadow: 0 16px 24px rgb(10, 14, 52);
+
+    &-descr {
+        margin-left: 105px;
+        color: $cwhite;
+        font-family: 'Proxima Nova Lt';
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18px;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+
+        &.b {
+            margin-left: 126px;
+        }
+
+        &.brend {
+            font-family: 'Proxima Nova Sb';
+            font-weight: 600;
+        }
+    }
+
+    &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 19px;
+        left: 43px;
+        width: 33px;
+        height: 37px;
+        background-image: url($path + "apple.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &.google {
+
+        &::before {
+            width: 36px;
+            height: 39px;
+            left: 64px;
+            background-image: url($path + "google-play.png");
+        }
+    }
+
+    &:first-child {
+        margin-right: 25px;
+    }
+
+    &:last-child {
+        margin-left: 25px;
+    }
+}
+
+.container {
+    max-width: 1530px;
+    margin: 0 auto;
+
+    &.big {
+        max-width: 1810px;
+        margin: 0 auto;
+    }
+}
+
+.descr {
+    @extend %for-d; 
+    margin-top: 31px;
+    padding-bottom: 65px;
+
+    &.bt {
+        padding-bottom: 105px;
+    }
+}
+
+.descript {
+    @extend %for-dc;
+    margin-top: 110px;
+}
+
+.title {
+    @extend %for-t;
+    padding-top: 112px;
+}
+
+.content {
+    @extend %for-c;
+    padding-top: 94px;
+
+    &.ct {
+        padding-top: 64px;
+    }
+}
+
+.number {
+    display: inline-block;
+    position: relative;
+    top: -12px;
+    color: $cblack;
+    font-family: 'Proxima Nova Bd';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+
+    &::after {
+        content: "";
+        display: block;
+        height: 5px;
+        border-radius: 2px;
+        background-color: rgb(94, 66, 176);
+    }
+
+    &.nb {
+        color: rgb(10, 14, 52);
+
+        &::after {
+            content: "";
+            background-color: rgb(239, 239, 239);
+        }
+    }
+
+    &.nr {
+        color: rgb(145, 115, 230);
+
+        &::after {
+            content: "";
+            background-color: rgb(255, 255, 255);
+        }
+    }
+}
+
+.fotorama {
+    display: none;
+}
+
+.football {
+
+    &__top {
+        .container {
+            position: relative;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 725px;
+                height: 1105px;
+                position: absolute;
+                z-index: 1;
+                top: 26px;
+                left: -750px;
+                background: url($path + "footballer.png") no-repeat;
+                background-size: cover;
+            } 
+
+            &::after {
+                content: "";
+                display: block;
+                width: 582px;
+                height: 668px;
+                position: absolute;
+                top: 66px;
+                left: -685px;
+                background: url($path + "rectangle-fbl.png") no-repeat center;
+                background-size: cover;
+            }
+        }
+    }
+
+    .container {
+        max-width: 765px;
+        margin-left: 50%;
+        padding-left: 45px;
+        box-sizing: border-box;
+    }
+
+    &__center {
+        background-color: rgba(94, 66, 176, 0.06);
+        
+        .container {
+            position: relative;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 37px;
+                height: 24px;
+                position: absolute;
+                top: -300px;
+                left: -660px;
+                background: url($path + "plusf.png") no-repeat center;
+                background-size: cover;
+
+            }
+        }  
+    }
+
+    &__bottom {
+        background-color: rgb(94, 66, 176);
+
+        .descr {
+            max-width: 610px;
+            color: $cwhite;
+        }
+    }
+}
+
+.basketball {
+    .container {
+        max-width: 765px;
+        padding-right: 40%;
+        padding-left: 135px;
+    }
+
+    &__top {
+        .container {
+            position: relative;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 991px;
+                height: 815px;
+                position: absolute;
+                top: -30px;
+                left: 600px;
+                z-index: 1;
+                background: url($path + "basketball.png") no-repeat;
+                background-size: cover;
+            }
+        
+            &::after {
+                content: "";
+                display: block;
+                width: 275px;
+                height: 319px;
+                position: absolute;
+                top: 38px;
+                left: 1250px;
+                background: url($path + "rectangle-bsb.png") no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+
+    &__t {
+        .descr {
+            max-width: 575px;
+        }
+    }
+
+    &__center {
+        background-color: rgba(10, 14, 52, 0.04);
+
+        .container {
+            position: relative;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                top: -90px;
+                left: 1370px;
+                background: url($path + "plus.png") no-repeat center;
+                background-size: cover;
+            }
+        }
+
+        .descr {
+            max-width: 535px;
+        }
+    }
+
+    &__bottom {
+        background-color: rgb(10, 14, 52);
+
+        .container {
+            position: relative;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 279px;
+                height: 321px;
+                position: absolute;
+                top: -295px;
+                left: 770px;
+                background: url($path + "rectangle-bsb.png") no-repeat center;
+                background-size: cover;
+            }
+        
+            &::after {
+                content: "";
+                display: block;
+                width: 37px;
+                height: 32px;
+                position: absolute;
+                top: -620px;
+                left: 890px;
+                background: url($path + "plusb.png") no-repeat center;
+                background-size: cover;
+            } 
+        }
+
+        .descr {
+            color: $cwhite;
+        }
+    }
+}
+
+.mains {
+    padding-left: 50%;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url($path + "shut.png");
+        background-size: cover;
+        background-repeat: no-repeat; 
+        background-position: center center;
+    }
+
+    &.center {
+        padding-left: 0;
+        padding-right: 50%;
+        display: flex;
+        justify-content: flex-end;
+
+        &::before {
+            left: auto;
+            right: 0;
+            background-image: url($path + "coach.png");
+        }
+    }
+
+    &.bottom {
+        &::before {
+            background-image: url($path + "team.png");
+        }
+    }
+
+    .container {
+        position: relative;
+        margin: 0;
+        max-width: 765px;
+        padding: 145px 0 125px 125px;
+        box-sizing: border-box;
+
+        .descript {
+            max-width: 330px;
+            min-height: 170px;
+            position: relative;
+
+            &::after {
+                content: "";
+                display: block;
+                margin-top: 5px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 22px;
+                height: 5px;
+                border-radius: 2px;
+                background-color: rgb(94, 66, 176);
+            }
+        }
+
+        &.half {
+            padding-left: 0;
+            flex-grow: 1;
+
+            .descript {
+                max-width: 395px;
+            }
+        }
+
+        &.dst {
+            .descript {
+                max-width: 515px;
+            }
+        }
+
+        .numbers {
+            position: absolute;
+            top: 211px;
+            left: -84px;
+            width: 168px;
+            height: 155px;
+            background-color: rgb(94, 66, 176);
+            color: rgb(245, 246, 247);
+            font-family: 'Proxima Nova Bd';
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 35px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.rt {
+                left: auto;
+                right: -84px;
+            }
+    
+            &__bord {
+                &::after {
+                content: "";
+                display: block;
+                height: 5px;
+                border-radius: 2px;
+                background-color: rgb(255, 255, 255);
+                opacity: 0.3;   
+                }
+            }
+        }   
+    }
+}
+
+.footer {
+    background: url($path + "bac.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+
+    &__link {
+        &-a {
+            display: block;
+            width: 130px;
+            height: 137px;
+            background-image: url($path + "artwork.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+    }
+
+    &__cont {
+        margin-left: 36px;
+        margin-right: 60px;
+    }
+
+    .title {
+        position: relative;
+        z-index: 2;
+        color: $cwhite;
+        padding-top: 10px;
+        margin-top: 10px;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 138px;
+            height: 157px;
+            position: absolute;
+            z-index: -1;
+            top: -25px;
+            left: 15px;
+            background: url($path + "rectangle-bot.png") no-repeat center center;
+            background-size: cover;
+        }
+    
+        &::after {
+            content: "";
+            display: block;
+            width: 275px;
+            height: 314px;
+            position: absolute;
+            z-index: -1;
+            top: -90px;
+            left: 320px;
+            background: url($path + "rectangle-bott.png") no-repeat center center;
+            background-size: cover;
+        }
+    }
+
+    .content {
+        position: relative;
+        z-index: 2;
+        color: rgb(164, 150, 202);
+        padding: 0;
+        margin-top: 12px;  
+        letter-spacing: normal;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: center;
+        padding-top: 229px;
+    }
+
+    &__opasity {
+        background-color: rgba(10, 14, 52, 0.6);
+    }
+
+    &__but {
+        display: flex;
+        justify-content: center;
+        margin-top: 163px;
+        padding-bottom: 197px;
+    }
+
+    &__bot {
+        padding: 74px 0 72px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        &-a {
+            display: block;
+            width: 172px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-image: url($path + "logo.png");
+        }
+    }
+
+    &__ikons {
+        margin-left: 40px;
+        display: inline-block;
+        width: 15px;
+        height: 27px;
+        background-image: url($path + "fb.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &.fb {
+            margin-left: 150px;
+        }
+
+        &.tw {
+            width: 27px;
+            height: 22px;
+            background-image: url($path + "tw.png");
+        }
+
+        &.cam {
+            width: 24px;
+            height: 25px;
+            background-image: url($path + "cam.png");
+        }
+    }
+
+    &__descr {
+        color: $cwhite;
+        @extend %for-d;
+    }
+}
+
+@media screen and (max-width: 1649px) {
+    .basketball {
+        overflow: hidden;
+    }
+}
+
+
+@media screen and (max-width: 1540px) {
+    .header {
+        .container {
+            &::before {
+                top: 225px;
+                left:250px;
+            }
+        }
+        &__title  {
+            font-size: 64px;
+            line-height: 64px;
+            letter-spacing: 3.2px;
+
+            &.title-l {
+                margin-top: 194px;
+                margin-left: 69px;
+            }
+
+            &.title-r {
+                position: relative;
+                z-index: 2;
+                text-align: start;
+                margin-left: 177px;
+            }
+        }
+
+        &__link {
+            margin-top: 173px;
+            text-align: start;
+            font-size: 16px;
+            letter-spacing: 0.8px;
+
+            &-a {
+                margin-left: 58px;
+
+                &:first-child {
+                    margin-left: 30px;
+                }
+            }
+        }
+
+        &__but {
+            margin-top: 116px;
+        }
+    }
+
+    .container {
+        max-width: 725px;
+
+        &.big {
+            max-width: 725px;
+        }
+    }
+
+    .descr {
+        margin-top: 22px;
+        padding-bottom: 38px;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.9px;
+    
+        &.bt {
+            padding-bottom: 55px;
+        }
+    }
+
+    .descript {
+        margin-top: 37px;
+    }
+
+    .content {
+        padding-top: 45px;
+    }
+
+    .title {
+        padding-top: 82px;
+    }
+
+    .football {
+        .container {
+            max-width: 530px;
+            margin-left: 45%;
+            padding-left: 0;
+            padding-right: 50px;
+        }
+
+        &__top {
+            .container {
+                &::before {
+                    width: 497px;
+                    height: 700px;
+                    top: 94px;
+                    left: -460px;
+                }
+
+                &::after {
+                    width: 419px;
+                    height: 481px;
+                    top: 112px;
+                    left: -480px;
+                }
+            }
+        }
+
+        &__center {
+            .container {
+                &::before {
+                    top: -280px;
+                    left: -270px;
+                }
+            }
+        }
+    }
+
+    .basketball {
+        .container {
+            max-width: 500px;
+            padding-right: 40%;
+            padding-left: 30px;
+        }
+
+        &__top {
+            .container {
+                &::before {
+                    width: 690px;
+                    height: 565px;
+                    top: 37px;
+                    left: 340px;
+                }
+
+                &::after {
+                    width: 198px;
+                    height: 230px;
+                    top: 90px;
+                    left: 780px;
+                }
+            }
+        }
+
+        &__t {
+            .descr {
+                max-width: 380px;
+            }
+        }
+
+        &__center {
+            .container {
+                &::before {
+                    top: -50px;
+                    left: 870px;
+                }
+
+                .descr {
+                    max-width: 450px;
+                }
+            }
+        }
+
+        &__bottom {
+            .container {
+                &::before {
+                    width: 200px;
+                    height: 231px;
+                    top: -270px;
+                    left: 480px;
+                }
+
+                &::after {
+                    top: -480px;
+                    left: 540px;
+                }
+            }
+
+            .descr {
+                max-width: 410px;
+            }
+        }
+    }
+
+    .mains {
+        padding-left: 0;
+
+        &::before {
+            position: static;
+            padding-bottom: 76%;
+            width: 100%;
+        }
+
+        &.center {
+            padding-left: 0;
+            padding-right: 0;
+            display: block;
+    
+            &::before {
+                position: static;
+                padding-bottom: 76%;
+                width: 100%;
+            }
+        }
+
+        .container {
+            max-width: 725px;
+            margin: 0 auto;
+            padding: 0 0 103px 13px;
+
+            .numbers {
+                width: 116px;
+                height: 116px;
+                top: -90px;
+                left: 13px;
+
+                &.rt {
+                    right: auto;
+                    top: -90px;
+                    left: 13px;
+                }
+            }
+
+            .descript {
+                max-width: 100%; 
+                min-height: auto;
+
+                &::after {
+                    bottom: -33px;
+                }
+            }
+
+            &.half {
+                padding-left: 13px;
+                flex-grow: 0;
+
+                .descript {
+                    max-width: 100%;
+                }
+            }
+
+            &.dst {
+                .descript {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .footer {
+        &__top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-top: 128px;
+        }
+
+        &__cont {
+            margin: 0;
+        }
+
+        .title {
+            margin-top: 72px;
+            font-size: 80px;
+            line-height: 60px;
+            letter-spacing: 4.5px;
+
+            &::before  {
+                top: -15px;
+                left: 10px;
+            }
+
+            &::after {
+                top: -80px;
+                left: 290px;
+            }
+        }
+        .content {
+            font-size: 36px;
+            line-height: 60px;
+        }
+
+        &__but {
+            margin-top: 186px;
+            padding-bottom: 129px;
+        }
+
+        &__bot {
+            display: inline;
+            padding: 0;
+            text-align: center;
+        }
+
+        &__ikons {
+            padding: 37px 0 33px;
+
+            &.fb {
+                margin: 0;
+            }
+        }
+
+        &__logo, &__descr {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1099px) {
+    .football {
+        .container {
+            margin-left: 38%;
+        }
+    }
+
+    .basketball {
+        .container {
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .header {
+        .container {
+            &::before {
+                width: 139px;
+                height: 174px;
+                top: 172px;
+                left: 85px;
+            }
+        }
+
+        &__top {
+            display: inline;
+        }
+
+        &__logo {
+            padding-top: 39px;
+
+            &-a {
+                width: 137px;
+                height: 24px;
+                margin-left: 80px;
+            }
+        }
+
+        &__descr {
+            display: none;
+        }
+
+        &__title {
+            font-size: 32px;
+            line-height: 32px;
+            letter-spacing: 1.6px;
+
+            &.title-l {
+                margin-top: 141px;
+                margin-left: 0;
+            }
+
+            &.title-r {
+                line-height: 40px;
+                margin-top: 20px;
+                margin-left: 55px;
+            }
+        }
+
+        &__link {
+            display: none;
+
+            &.none {
+                display: block;
+                text-align: center;
+                font-size: 12px;
+                line-height: 24px;
+                letter-spacing: 0.6px;
+                padding-bottom: 20px;
+                margin-top: 45px;
+            }
+
+            &-a {
+                margin-left: 33px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:nth-child(4) {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-left: 55px;
+                }
+            }
+        }
+
+        &__but {
+            margin-top: 110px;
+            padding: 0;
+        }
+    }
+
+    .button {
+        width: 142px;
+        height: 39px;
+
+        &-descr {
+            display: block;
+            margin-left: 45px;
+            font-size: 8px;
+            line-height: 12px;
+            letter-spacing: 0.4px;
+
+            &.b {
+                margin-left: 54px;
+            }
+    
+            &.brend {
+                display: block;
+                font-family: "Proxima Nova";
+                font-weight: 400;
+            }
+        }
+
+        &::before {
+            top: 11px;
+            left: 20px;
+            width: 15px;
+            height: 17px;
+        }
+    
+        &.google {
+            &::before {
+                width: 16px;
+                height: 18px;
+                left: 30px;
+                background-image: url($path + "google-play.png");
+            }
+        }
+    
+        &:first-child {
+            margin-right: 5px;
+        }
+    
+        &:last-child {
+            margin-left: 5px;
+        }
+    }
+
+    .container {
+        max-width: 300px;
+
+        &__big {
+            max-width: 300px;
+        }
+    }
+
+    .descr {
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.75px;
+
+        &.bt {
+            color: $cblack;
+            padding-bottom: 40px;
+        }
+    }
+
+    .descript {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.8px;
+    }
+
+    .content {
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: 1.4px;
+        color: rgb(193, 193, 193);
+    }
+
+    .title {
+        padding-top: 20px;
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .number {
+        top: -8px;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.7px;
+    
+        &::after {
+            height: 4px;
+        }
+    
+        &.nb {
+            &::after {
+                background-color: rgb(94, 66, 176);
+            }
+        }
+    
+        &.nr {
+            color: $cblack;
+
+            &::after {
+                background-color: rgb(94, 66, 176);
+            }
+        }
+    }
+
+    .wrap {
+        .fotorama {
+            display: block;
+            margin-top: 280px;
+            padding-bottom: 15px;
+
+            &__wrap--css3 .fotorama__arr:not(:focus), .fotorama__wrap--css3 .fotorama__fullscreen-icon:not(:focus), .fotorama__wrap--css3 .fotorama__video-close:not(:focus), .fotorama__wrap--css3 .fotorama__video-play:not(:focus) {
+                width: 0;
+                height: 0;
+                
+            }
+
+            &__nav--dots .fotorama__nav__frame {
+                width: 24px;
+            }
+    
+            &__dot {
+                width: 10px;
+                height: 10px;
+                top: 0;
+                border: 0;
+                background-color: rgb(216, 216, 216);
+            }
+
+            &__nav__frame.fotorama__active .fotorama__dot {
+                width: 10px;
+                height: 10px;
+                border: 0;
+                background-color: rgb(92, 60, 175);
+            }
+        }
+
+        .fotorama__arr, .fotorama__fullscreen-icon, .fotorama__no-select, .fotorama__video-close, .fotorama__video-play, .fotorama__wrap {
+            margin: 0 auto;
+        }
+
+        .fotorama__caption, .fotorama__nav:after, .fotorama__nav:before, .fotorama__stage:after, .fotorama__stage:before, .fotorama__wrap--css3 .fotorama__html, .fotorama__wrap--css3 .fotorama__spinner, .fotorama__wrap--css3 .fotorama__stage, .fotorama__wrap--css3 .fotorama__stage .fotorama__img, .fotorama__wrap--css3 .fotorama__stage__frame {
+            height: 200px !important;
+        }
+    }
+
+    .football {
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 0;
+
+            
+        }
+
+        &__top {
+            .container {
+                &::before {
+                    width: 192px;
+                    height: 281px;
+                    top: 90px;
+                    left: 50px;
+                }
+
+                &::after {
+                    width: 181px;
+                    height: 198px;
+                    top: 103px;
+                    left: 48px;
+                }
+            }
+
+            .title {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 37px;
+                    height: 24px;
+                    position: absolute;
+                    top: 95px;
+                    left: 30px;
+                    background: url($path + "plusf.png") no-repeat center;
+                    background-size: cover;   
+                }
+            }
+        }
+
+        &__fotorama {
+            .content {
+                padding-top: 30px;  
+            }
+
+            .descr {
+                padding-bottom: 0;
+            }
+        }
+
+        
+
+        &__t,
+        &__center,
+        &__bottom {
+            display: none;
+        }
+    }
+
+    .basketball {
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        &__top {
+            .container {
+                &::before {
+                    width: 302px;
+                    height: 248px;
+                    top: 100px;
+                    left: 0px;
+                }
+
+                &::after {
+                    width: 78px;
+                    height: 91px;
+                    top: 122px;
+                    left: 195px;
+                }
+            }
+
+            .title {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 93px;
+                    height: 109px;
+                    position: absolute;
+                    top: 235px;
+                    left: 40px;
+                    background: url($path + "rectangle-bsb.png") no-repeat center;
+                    background-size: cover;
+                }
+            
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 37px;
+                    height: 32px;
+                    position: absolute;
+                    top: 95px;
+                    left: 40px;
+                    background: url($path + "plusb.png") no-repeat center;
+                    background-size: cover;
+                }
+            }
+        }
+
+        &__fotorama {
+            .content {
+                padding-top: 30px;
+            }
+
+            .descr {
+                padding-bottom: 0;
+            }
+        }
+
+        &__t,
+        &__center,
+        &__bottom {
+            display: none;
+        }
+    }
+
+    .mains {
+        .container {
+            padding-bottom: 75px;
+
+            .title {
+                font-size: 28px;
+                line-height: 35px;
+                letter-spacing: 1.4px;
+                padding-top: 30px;
+            }
+
+            .numbers {
+                width: 70px;
+                height: 70px;
+                top: -58px;
+                left: 13px;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.7px;
+
+                &.rt {
+                    right: auto;
+                    top: -58px;
+                    left: 13px;
+                }
+
+                &__bord {
+                    &::after {
+                    height: 4px;  
+                    }
+                }
+            }
+
+            .descript {
+                max-width: 220px;
+                margin-top: 18px;
+            }
+
+            &.half{
+                .descript {
+                    max-width: 265px;
+                }
+            }
+
+            &.dst {
+                .descript {
+                    max-width: 265px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        &__top {
+            padding-top: 97px;
+        }
+
+        &__link {
+            &-a {
+                width: 73px;
+                height: 78px;
+            }
+        }
+
+        .title {
+            margin-top: 57px;
+            font-size: 34px;
+            line-height: 34px;
+            letter-spacing: 1.7px;
+
+            &::before  {
+                width: 58px;
+                height: 67px;
+                top: 5px;
+                left: 2px;
+            }
+
+            &::after {
+                width: 95px;
+                height: 121px;
+                top: -20px;
+                left: 130px;
+            }
+        }
+        .content {
+            margin-top: 6px;
+            font-size: 15px;
+            line-height: 15px;
+            letter-spacing: 0.4px;
+        }
+
+        &__but {
+            margin-top: 72px;
+            padding-bottom: 127px;
+        }
+
+        &__ikons {
+            padding: 20px 0 14px;
+            width: 10px;
+            height: 18px;
+
+            &.tw {
+                width: 18px;
+                height: 15px;
+            }
+    
+            &.cam {
+                width: 17px;
+                height: 17px;
+            }
+        }
+    }
+}
